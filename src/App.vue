@@ -1,28 +1,32 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+  <v-app>
+    <v-main>
+      <!-- <NavbarTool /> -->
+      <ImageList />
+      <ModelView />
+    </v-main>
+    <FloatBtn />
+  </v-app>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import ModelView from './components/ModelView'
+// import NavbarTool from './components/NavbarTool'
+import ImageList from './components/ImageList'
+import FloatBtn from './components/FloatBtn'
 
 export default {
   name: 'App',
+
   components: {
-    HelloWorld
-  }
+    ModelView,
+    // NavbarTool,
+    ImageList,
+    FloatBtn,
+  },
+
+  data: () => ({
+    //
+  }),
 }
 </script>
-
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
